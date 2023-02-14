@@ -3,25 +3,32 @@ import "./App.css";
 import styled from "styled-components";
 
 type FlexContainerProps = {
+  display?: string;
   direction?: string;
   justifyContent?: string;
   height?: string;
   alignItems?: string;
+  gridTemplateColumns?: string;
+  gridTemplateRows?: string;
+  gap?: string;
 };
 
 const FlexContainer = styled.div<FlexContainerProps>`
   padding-bottom: 60px;
-  display: flex;
+  display: ${(props) => props.display || "flex"};
   flex-direction: ${(props) => props.direction || "initial"};
   justify-content: ${(props) => props.justifyContent || "flex-start"};
   height: ${(props) => props.height || "auto"};
   align-items: ${(props) => props.alignItems || "stretch"};
+  grid-template-columns: ${(props) => props.gridTemplateColumns || "auto"};
+  grid-template-rows: ${(props) => props.gridTemplateRows || "auto"};
+  gap: ${(props) => props.gap || "initial"};
   border-bottom: solid 5px #432c02;
 `;
 
 const Container = styled.div`
   background-color: #f6f0cc;
-  padding: 20px 30vw;
+  padding: 20px 20vw;
 `;
 
 const ItemList = styled.div`
@@ -31,7 +38,7 @@ const ItemList = styled.div`
   padding: 10px;
 `;
 
-const Items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+const Items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"];
 const ItemElem = Items.map((Item) => {
   return <ItemList>{Item}</ItemList>;
 });
@@ -81,6 +88,16 @@ function App() {
 
         <h1>align-items: baseline</h1>
         <FlexContainer height="30vh" alignItems="baseline">
+          {ItemElem}
+        </FlexContainer>
+
+        <h1>display: grid</h1>
+        <FlexContainer
+          display="grid"
+          gridTemplateColumns="1fr 1fr 1fr"
+          gridTemplateRows="200px 200px"
+          gap="10px"
+        >
           {ItemElem}
         </FlexContainer>
       </Container>
