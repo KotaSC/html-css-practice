@@ -1,15 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ"
+        />
+        <title>Web Cafe</title>
+      </Helmet>
+      <App />
+    </HelmetProvider>
   </React.StrictMode>
 );
 
