@@ -1,9 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import "./index.css";
+import { createGlobalStyle } from "styled-components";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 100%;
+  }
+  body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ビラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+`;
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,6 +36,7 @@ root.render(
         />
         <title>Web Cafe</title>
       </Helmet>
+      <GlobalStyle />
       <App />
     </HelmetProvider>
   </React.StrictMode>
