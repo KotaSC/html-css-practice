@@ -1,11 +1,13 @@
 import React from "react";
 import { Head } from "./components/Head/Head";
+import { RouterConfig } from "./routes/RouterConfig";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Head />
-    </div>
+      <RouterConfig />
+    </>
   );
 }
 

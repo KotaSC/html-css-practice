@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import logo from "../../assets/images/logo.svg";
 
-const Image = styled.image``;
+const Image = styled.h1`
+  width: 210px;
+  margin-top: 14px;
+`;
 
 export const Logo = () => {
   return (
     <Image>
-      <h1>
-        <img src={logo} alt="WCBカフェ ホーム"></img>
-      </h1>
+      <img src={logo} alt="WCBカフェ ホーム" />
     </Image>
   );
 };

@@ -1,8 +1,24 @@
 import styled from "styled-components";
 import { Logo } from "./Logo";
-import { RouterConfig } from "../../routes/RouterConfig";
 
-const NavList = styled.ul``;
+const NavList = styled.ul`
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+`;
+
+const NavItem = styled.li`
+  margin-left: 36px;
+`;
+
+const NavLink = styled.a`
+  color: #432;
+  &:hover {
+    color: #0bd;
+  }
+`;
 
 export const Nav = () => {
   return (
@@ -12,18 +28,17 @@ export const Nav = () => {
       </a>
       <nav>
         <NavList>
-          <li>
-            <a href="/news">News</a>
-          </li>
-          <li>
-            <a href="/menu">Menu</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
+          <NavItem>
+            <NavLink href="/news">News</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/menu">Menu</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/contact">Contact</NavLink>
+          </NavItem>
         </NavList>
       </nav>
-      <RouterConfig />
     </>
   );
 };
