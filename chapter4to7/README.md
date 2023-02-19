@@ -5,6 +5,7 @@
 
 ## 使用しているライブラリ
 - [styled-components](https://styled-components.com/)
+- [styled-reset](https://www.npmjs.com/package/styled-reset)
 - [react-helmet-async](https://www.npmjs.com/package/react-helmet-async)
 - [react-router](https://reactrouter.com/en/main)
 - [react-favicon](https://www.npmjs.com/package/react-favicon)
