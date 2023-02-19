@@ -5,10 +5,12 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import Favicon from "react-favicon";
 import icon from "./assets/images/favicon.png";
+import reset from "styled-reset";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const GlobalStyle = createGlobalStyle`
+  ${reset}
   html {
     font-size: 100%;
   }
