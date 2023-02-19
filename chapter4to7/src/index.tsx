@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
+import Favicon from "react-favicon";
+import icon from "./assets/images/favicon.png";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -28,6 +30,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <Favicon url={icon} />
     <HelmetProvider>
       <Helmet>
         <meta charSet="utf-8" />
