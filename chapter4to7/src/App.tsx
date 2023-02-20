@@ -28,7 +28,7 @@ function App() {
     <>
       <Meta pagePath={location.pathname} />
       <BgPicture pagePath={location.pathname}>
-        <Header />
+        <Header pagePath={location.pathname} />
         <RouterConfig />
       </BgPicture>
     </>
