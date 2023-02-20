@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
-import { Head } from "./components/Head/Head";
+import { Header } from "./components/Header/Header";
 import { RouterConfig } from "./routes/RouterConfig";
 import { useLocation } from "react-router-dom";
+import { Meta } from "./components/Meta/Meta";
 import homeBgImg from "./assets/images/main-bg.jpg";
 
 type BgPictureProps = {
@@ -25,8 +26,9 @@ function App() {
 
   return (
     <>
+      <Meta pagePath={location.pathname} />
       <BgPicture pagePath={location.pathname}>
-        <Head />
+        <Header />
         <RouterConfig />
       </BgPicture>
     </>

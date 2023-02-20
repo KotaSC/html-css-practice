@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 import Favicon from "react-favicon";
@@ -33,20 +32,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Favicon url={icon} />
-    <HelmetProvider>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta
-          name="description"
-          content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ"
-        />
-        <title>Web Cafe</title>
-      </Helmet>
-      <GlobalStyle />
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
+    <GlobalStyle />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -7,17 +7,17 @@ const Wrapper = styled.div`
   padding: 0 4%;
 `;
 
-const Header = styled.header`
+const Head = styled.header`
   display: flex;
   justify-content: space-between;
 `;
 
-export const Head = () => {
+export const Header = () => {
   return (
     <Wrapper>
-      <Header>
+      <Head>
         <Nav />
-      </Header>
+      </Head>
     </Wrapper>
   );
 };
