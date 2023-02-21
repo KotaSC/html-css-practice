@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 import { RouterConfig } from "./routes/RouterConfig";
 import { useLocation } from "react-router-dom";
 import { Meta } from "./components/Meta/Meta";
@@ -30,6 +31,7 @@ function App() {
       <BgPicture pagePath={location.pathname}>
         <Header pagePath={location.pathname} />
         <RouterConfig />
+        {location.pathname !== "/" && <Footer />}
       </BgPicture>
     </>
   );
