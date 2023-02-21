@@ -1,12 +1,26 @@
 import styled from "styled-components";
+import { Article } from "./Article";
+import { Sidebar } from "./Sidebar";
 
 const Wrapper = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 4%;
-  text-align: center;
+`;
+
+const Contents = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 `;
 
 export const News = () => {
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <Contents>
+        <Article />
+        <Sidebar />
+      </Contents>
+    </Wrapper>
+  );
 };
