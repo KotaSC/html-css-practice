@@ -3,12 +3,18 @@ import postImg from "../../assets/images/wall.jpg";
 
 const NewsArticle = styled.article`
   width: 74%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const PostInfo = styled.header`
   position: relative;
   padding-top: 4px;
   margin-bottom: 40px;
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
+  }
 `;
 
 const PostTitle = styled.h2`
@@ -16,6 +22,10 @@ const PostTitle = styled.h2`
   font-size: 2rem;
   font-weight: normal;
   margin-left: 120px;
+  @media (max-width: 600px) {
+    font-size: 1.375rem;
+    margin-left: 80px;
+  }
 `;
 
 const PostDay = styled.p`
@@ -29,6 +39,11 @@ const PostDay = styled.p`
   position: absolute;
   top: 0;
   padding-top: 10px;
+  @media (max-width: 600px) {
+    width: 70px;
+    height: 65px;
+    font-size: 1rem;
+  }
 `;
 
 const PostYear = styled.span`
@@ -38,6 +53,10 @@ const PostYear = styled.span`
   display: block;
   width: 60%;
   margin: 0 auto;
+  @media (max-width: 600px) {
+    font-size: 0.875rem;
+    padding-top: 2px;
+  }
 `;
 
 const PostImage = styled.img`
@@ -46,6 +65,11 @@ const PostImage = styled.img`
 
 const PostCategory = styled.p`
   margin-left: 120px;
+  @media (max-width: 600px) {
+    font-size: 0.875rem;
+    margin-top: 10px;
+    margin-left: 80px;
+  }
 `;
 
 const ArticleText = styled.p`

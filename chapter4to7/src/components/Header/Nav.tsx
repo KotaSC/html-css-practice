@@ -7,10 +7,17 @@ const NavList = styled.ul`
   text-transform: uppercase;
   margin-top: 34px;
   list-style: none;
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
 `;
 
 const NavItem = styled.li`
   margin-left: 36px;
+  @media (max-width: 600px) {
+    margin: 0 20px;
+  }
 `;
 
 const NavLink = styled.a`

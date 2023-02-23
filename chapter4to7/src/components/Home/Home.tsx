@@ -6,6 +6,9 @@ const Wrapper = styled.div`
   padding: 0 4%;
   text-align: center;
   margin-top: 10%;
+  @media (max-width: 600px) {
+    margin-top: 30%;
+  }
 `;
 
 const PageTitle = styled.h2`
@@ -13,6 +16,9 @@ const PageTitle = styled.h2`
   font-family: "Philosopher", serif;
   text-transform: none;
   font-weight: normal;
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const HomeText = styled.p`

@@ -31,6 +31,7 @@ export const Meta = (props: { pagePath: string }) => {
           name="description"
           content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{pageTitle(props.pagePath)}</title>
       </Helmet>
     </HelmetProvider>

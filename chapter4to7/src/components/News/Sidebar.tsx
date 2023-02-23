@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const Aside = styled.aside`
   width: 22%;
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-top: 60px;
+  }
 `;
 
 const SubTitle = styled.h3`
