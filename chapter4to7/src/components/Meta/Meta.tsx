@@ -1,15 +1,28 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-export const Meta = (props: { pagePath: string }) => {
-  let pageTitle: string;
+const pageTitleList = {
+  home: "WCB Cafe",
+  news: "WCB Cafe - NEWS",
+  menu: "WCB Cafe - MENU",
+  contact: "WCB Cafe - CONTACT",
+  notfound: "404 Not Found",
+};
 
-  if (props.pagePath === "/") {
-    pageTitle = "WCB Cafe";
-  } else if (props.pagePath === "/news") {
-    pageTitle = "WCB Cafe - NEWS";
+const pageTitle = (pagePath: string): string => {
+  if (pagePath === "/") {
+    return pageTitleList.home;
+  } else if (pagePath === "/news") {
+    return pageTitleList.news;
+  } else if (pagePath === "/menu") {
+    return pageTitleList.menu;
+  } else if (pagePath === "/contact") {
+    return pageTitleList.contact;
   } else {
-    pageTitle = "見つかりませんでした - WCB Cafe";
+    return pageTitleList.notfound;
   }
+};
+
+export const Meta = (props: { pagePath: string }) => {
   return (
     <HelmetProvider>
       <Helmet>
@@ -18,7 +31,7 @@ export const Meta = (props: { pagePath: string }) => {
           name="description"
           content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ"
         />
-        <title>{pageTitle}</title>
+        <title>{pageTitle(props.pagePath)}</title>
       </Helmet>
     </HelmetProvider>
   );
