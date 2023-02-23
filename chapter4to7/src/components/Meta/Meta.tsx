@@ -4,11 +4,11 @@ export const Meta = (props: { pagePath: string }) => {
   let pageTitle: string;
 
   if (props.pagePath === "/") {
-    pageTitle = "Web Cafe";
+    pageTitle = "WCB Cafe";
   } else if (props.pagePath === "/news") {
-    pageTitle = "Web Cafe - NEWS";
+    pageTitle = "WCB Cafe - NEWS";
   } else {
-    pageTitle = "見つかりませんでした - Web Cafe";
+    pageTitle = "見つかりませんでした - WCB Cafe";
   }
   return (
     <HelmetProvider>
