@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   padding: 0 4%;
 `;
 
-const Contents = styled.div`
+const NewsContents = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
@@ -20,10 +20,10 @@ const Contents = styled.div`
 export const News = () => {
   return (
     <Wrapper>
-      <Contents>
+      <NewsContents>
         <Article />
         <Sidebar />
-      </Contents>
+      </NewsContents>
     </Wrapper>
   );
 };
