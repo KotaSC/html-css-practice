@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer/Footer";
 import { RouterConfig } from "./routes/RouterConfig";
 import { useLocation } from "react-router-dom";
 import { Meta } from "./components/Meta/Meta";
+import { MenuItems } from "./components/Menu/MenuItems";
 import homeBgImg from "./assets/images/main-bg.jpg";
 import menuBgImg from "./assets/images/menu-bg.jpg";
 
@@ -37,6 +38,7 @@ function App() {
         <Header pagePath={location.pathname} />
         <RouterConfig />
       </BgPicture>
+      {location.pathname === "/menu" && <MenuItems />}
       {location.pathname !== "/" && <Footer />}
     </>
   );
