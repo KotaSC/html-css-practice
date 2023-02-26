@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Nav } from "./Nav";
 import newsBgImg from "../../assets/images/news-bg.jpg";
+
+type PageTitleProps = {
+  isContact: boolean;
+};
 
 const Wrapper = styled.div`
   max-width: 1100px;
@@ -24,23 +28,30 @@ const BgPicture = styled.div`
   margin-bottom: 40px;
 `;
 
-const PageTitle = styled.h2`
+const PageTitle = styled.h2<PageTitleProps>`
   font-size: 5rem;
   font-family: "Philosopher", serif;
   text-transform: none;
   font-weight: normal;
-  text-align: center;
+
+  ${(props) =>
+    !props.isContact &&
+    css`
+      text-align: center;
+    `}
 `;
 
 export const Header = (props: { pagePath: string }) => {
-  const isNews = props.pagePath !== "/news" ? true : false;
+  const isNews = props.pagePath === "/news" ? true : false;
+  const isContact = props.pagePath === "/contact" ? true : false;
   return (
     <>
-      {isNews ? (
+      {!isNews ? (
         <Wrapper>
           <Head>
             <Nav />
           </Head>
+          {isContact && <PageTitle isContact={isContact}>CONTACT</PageTitle>}
         </Wrapper>
       ) : (
         <BgPicture>
@@ -48,7 +59,7 @@ export const Header = (props: { pagePath: string }) => {
             <Head>
               <Nav />
             </Head>
-            <PageTitle>NEWS</PageTitle>
+            <PageTitle isContact={isContact}>NEWS</PageTitle>
           </Wrapper>
         </BgPicture>
       )}
