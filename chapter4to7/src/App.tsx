@@ -7,6 +7,7 @@ import { Meta } from "./components/Meta/Meta";
 import { MenuItems } from "./components/Menu/MenuItems";
 import homeBgImg from "./assets/images/main-bg.jpg";
 import menuBgImg from "./assets/images/menu-bg.jpg";
+import contactBgImg from "./assets/images/contact-bg.jpg";
 
 type BgPictureProps = {
   pagePath: String;
@@ -19,6 +20,10 @@ const BgPicture = styled.div<BgPictureProps>`
     (props.pagePath === "/menu" &&
       css`
         background-image: url(${menuBgImg});
+      `) ||
+    (props.pagePath === "/contact" &&
+      css`
+        background-image: url(${contactBgImg});
       `) ||
     (props.pagePath === "/" &&
       css`
