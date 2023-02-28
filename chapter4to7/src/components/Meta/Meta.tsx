@@ -32,6 +32,13 @@ export const Meta = (props: { pagePath: string }) => {
           content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:url" content="http://example.com/index.html" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="おしゃれなカフェで癒されてみませんか？無添加の食材で体の中からリフレッシュ．"
+        />
+        <meta property="og:image" content="http://example.com/images/ogp.jpg" />
         <title>{pageTitle(props.pagePath)}</title>
       </Helmet>
     </HelmetProvider>
